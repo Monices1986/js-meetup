@@ -1,6 +1,7 @@
 # Create a small gallery
 
-Use loops, functions and conditionals and how to structure code.
+- Use loops for showing images
+-  functions and conditionals and how to structure code.
 
 Use all the tools at your disposal to make your life easier. Programming is hard enough already.
 

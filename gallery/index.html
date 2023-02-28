@@ -1,61 +1,31 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Document</title>
-  </head>
-  <body>
+<html>
+<head>
+<title>Lesson 1: Gallery</title>
+</head>
+<body>
+    <h1>Gallery</h1>
+    <div class="row small-image">
+        <img src="img/landscape-001-small.jpg" alt="image 1">
+        <img src="img/landscape-002-small.jpg" alt="image 2">
+        <img src="img/landscape-003-small.jpg" alt="image 3">
+    </div>
+    <div class ="row small-image">
+        <img src="img/landscape-004-small.jpg" alt="image 4">
+        <img src="img/landscape-005-small.jpg" alt="image 5">
+        <img src="img/landscape-006-small.jpg" alt="image 6">
+    </div>
+    <div class="row normal-image">
+        <img src="img/landscape-001.jpg" alt="image 4">
+        <img src="img/landscape-002.jpg" alt="image 5">
+        <img src="img/landscape-003.jpg" alt="image 6">
+    </div>
+    <div class="row normal-image">
+        <img src="img/landscape-004.jpg" alt="image 4">
+        <img src="img/landscape-005.jpg" alt="image 5">
+        <img src="img/landscape-006.jpg" alt="image 6">
+    </div>
 
-    <center>
-      <button onclick="updateGallery(0)">1</button>
-      <button onclick="updateGallery(1)">2</button>
-      <button onclick="updateGallery(2)">3</button>
-    </center>
-
-    <table>
-      <tr>
-        <td><img id="image-001" src="./img/landscape-001-small.jpg"/></td>
-        <td><img id="image-002" src="./img/landscape-002-small.jpg"/></td>
-        <td><img id="image-003" src="./img/landscape-003-small.jpg"/></td>
-      </tr>
-      <tr>
-        <td><img id="image-004" src="./img/landscape-004-small.jpg"/></td>
-        <td><img id="image-005" src="./img/landscape-005-small.jpg"/></td>
-        <td><img id="image-006" src="./img/landscape-006-small.jpg"/></td>
-      </tr>
-      <tr>
-        <td><img id="image-007" src="./img/landscape-007-small.jpg"/></td>
-        <td><img id="image-008" src="./img/landscape-008-small.jpg"/></td>
-        <td><img id="image-009" src="./img/landscape-009-small.jpg"/></td>
-      </tr>
-    </table>
-
-    <script>
-    const numberOfImagesPerPage = 9;
-
-    function hello(index) {
-      console.log("Hello " + index)
-    }
-
-    function updateGallery(index) {
-      // get a collection of all images on this page - in this case it's an array
-      var images = Array.prototype.slice.call(document.getElementsByTagName('img'));
-      console.log(images);
-      // we want to update each image, one by one
-      images.forEach((image, i) => {
-        // calculate image number on page basis
-        var imageNumber = (i + 1) + 9 * parseInt(index);
-        // format the imageNumber so it's always 3 digits - 001 or 012 or 310
-        var imageNumberToShow = imageNumber.toString().padStart(3, '0')
-        // build URL for the next image
-        var nextImageUrl = "./img/landscape-" + imageNumberToShow + "-small.jpg";
-        console.log("sd" + nextImageUrl);
-        // overwrite the 'src' attribute of the image
-        image.src = nextImageUrl;
-      });
-    }
-
-    </script>
-
-  </body>
+    <script src="main.js"></script>
+</body>
 </html>
