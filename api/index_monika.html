@@ -9,34 +9,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
     />
-    <style>
-      body,
-      h1 {
-        font-family: "Raleway", sans-serif;
-      }
-      body,
-      html {
-        height: 100%;
-      }
-      .bgimg {
-        min-height: 100%;
-        background-position: center;
-        background-size: cover;
-        background: rgba(0, 0, 0, 0.65);
-        background-blend-mode: darken;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!--
-        FOCUS ON THE JAVASCRIPT BELOW
-
-        HTML is just a copy of this template:
-        https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_coming_soon&stacked=h
-
-        I only added some IDs so you can access the elements easily, like 'logo' or 'dogImage'
--->
-
     <div class="bgimg w3-display-container w3-text-white">
       <div class="w3-display-topleft w3-padding-large w3-xlarge">
         <img id="logo" src="./img/no-logo.png" width="65px" height="65px" />
@@ -58,67 +33,6 @@
         Put your IP here!
       </div>
     </div>
-
-    <script>
-      function run() {
-        loadRandomBackground();
-        setLogo();
-        setDogImage();
-        setIpAddress();
-        setPersonName();
-      }
-
-      function loadRandomBackground() {
-        // Create an array with all image names
-        var images = [
-          "landscape-001.jpg",
-          "landscape-002.jpg",
-          "landscape-003.jpg",
-          "landscape-004.jpg",
-          "landscape-005.jpg",
-        ];
-        // Get a random number defined by the number of images
-        var randomNumber = Math.floor(Math.random() * images.length);
-        // Set random background image on page load
-        document.body.style.background =
-          "url(./img/" + images[randomNumber] + ") no-repeat center center";
-      }
-
-      // ID of the field is 'logo'
-      function setLogo() {
-        // Repeat from last lesson: Get element by ID 'logo' and
-        // replace local image with URL: "https://ucarecdn.com/8c798d25-f03a-43d2-9a92-13f9e9b08fad/Layer2.svg&w=96&q=75"
-        var logoUrl =
-          "https://ucarecdn.com/8c798d25-f03a-43d2-9a92-13f9e9b08fad/Layer2.svg&w=96&q=75";
-        let logoImage = document.getElementById("logo");
-        logoImage.src = logoUrl;
-      }
-
-      // ID of the field is 'dogImage'
-      async function setDogImage() {
-        // API: get a random dog image from  https://dog.ceo/api/breeds/image/random
-        const dogApi = "https://dog.ceo/api/breeds/image/random";
-      }
-
-      // ID of the field is 'ipAddress'
-      async function setIpAddress() {
-        // API: get your own IP address at   https://api.ipify.org?format=json
-        const ipApi = " https://api.bigdatacloud.net/data/client-ip";
-      }
-
-      // ID of the field is 'personName'
-      async function setPersonName() {
-        // API: Get a complex USER JSON from  https://randomuser.me/api/ and extract first and last name
-        const personApi = "https://randomuser.me/api/";
-      }
-
-      async function fetchFromApi(link) {
-        // use fetch() and chain .then()
-        // ! this part is tricky, consider copy-pasting it and let's talk about it !
-      }
-
-      // this is the entrypoint. once the page loads, this top level function gets executed
-      run();
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
